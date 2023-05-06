@@ -5,6 +5,8 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
+
 (function() {
   "use strict";
 
@@ -58,7 +60,19 @@
       }
     })
   }
-  window.addEventListener('load', navbarlinksActive)
+
+  const getUrlData=()=>{
+    let params = new URLSearchParams(window.location.search);
+    let data = params.get("data");
+    if(data !== null){
+      console.log('inside getUrlData',data);
+    }
+  }
+
+  window.addEventListener('load',()=>{
+    navbarlinksActive()
+    getUrlData()
+  })
   onscroll(document, navbarlinksActive)
 
   /**

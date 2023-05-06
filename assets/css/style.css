@@ -9,6 +9,10 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+:root{
+--mainbgcolor : black;
+--mainfontcolor : white; 
+}
 body {
   font-family: "Open Sans", sans-serif;
   color: #272829;
@@ -336,10 +340,10 @@ section {
 # About
 --------------------------------------------------------------*/
 .about{
-  background-color: black;
+  background-color: var(--mainbgcolor);
 }
 .about-heading{
-  color: white;
+  color: var(--mainfontcolor);
 }
 
 .about p{
@@ -348,7 +352,7 @@ section {
 .about .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: white;
+  color: var(--mainfontcolor);
   /* color: #173b6c; */
 }
 
@@ -361,7 +365,7 @@ section {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  color: white;
+  color: var(--mainfontcolor);
 }
 
 .about .content ul strong {
@@ -383,15 +387,18 @@ section {
 # Facts
 --------------------------------------------------------------*/
 .facts {
+  background-color: var(--mainbgcolor);
   padding-bottom: 30px;
+  color: var(--mainfontcolor);
 }
+
 
 .facts .count-box {
   padding: 30px;
   width: 100%;
 }
 
-.facts .count-box i {
+.facts .count-box i{
   display: block;
   font-size: 44px;
   color: #149ddd;
@@ -431,8 +438,12 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Akills
+# skills
 --------------------------------------------------------------*/
+.skills{
+  background-color: black;
+}
+
 .skills .progress {
   height: 60px;
   display: block;
@@ -447,7 +458,8 @@ section {
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
-  color: #050d18;
+  /* color: #050d18; */
+  color: white;
 }
 
 .skills .progress .skill .val {
@@ -470,12 +482,15 @@ section {
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
+.resume{
+  background-color: var(--mainbgcolor);
+}
 .resume .resume-title {
   font-size: 26px;
   font-weight: 700;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #050d18;
+  color: #149ddd;
 }
 
 .resume .resume-item {
@@ -485,7 +500,7 @@ section {
   position: relative;
 }
 
-.resume .resume-item h4 {
+.resume .resume-item {
   line-height: 18px;
   font-size: 18px;
   font-weight: 600;
@@ -634,6 +649,7 @@ section {
 --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
+  background-color: black;
 }
 
 .portfolio-details .portfolio-details-slider img {
@@ -659,7 +675,8 @@ section {
 
 .portfolio-details .portfolio-info {
   padding: 30px;
-  box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08);
+  /* box-shadow: 0px 0 30px rgba(5, 13, 24, 0.08); */
+  box-shadow: 0px 0 30px rgba(255, 255, 255, 0.144);
 }
 
 .portfolio-details .portfolio-info h3 {
