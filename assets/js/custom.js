@@ -42,3 +42,5 @@ document.getElementById("sendMail").addEventListener('click',()=>{
     
     window.location.href = "mailto:" + email + "?subject=" + subject + "&body=" + body;
 })
+
+
