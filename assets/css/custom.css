@@ -31,4 +31,9 @@
 .resume h4,.blue{
     color: #149ddd;
 }
-
+.blue{
+    color: #149ddd;
+}
+.portfolio {
+    background-color: var(--mainbgcolor);
+}
