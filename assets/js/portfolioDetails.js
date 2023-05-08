@@ -64,17 +64,40 @@
 // To get id from a URL
     const getUrlData=()=>{
       let params = new URLSearchParams(window.location.search);
-      let id = params.get("id");
-      console.log();
-      if(id !== null){
-        console.log(projects.find(project => project.id === id));
-        console.log('inside getUrlData',id);
-      }
+      return params.get("id");
     }
   
+function showSlides(images){
+  let elem = ``
+  images.forEach(img => {
+    elem += `<div class="swiper-slide"><img src="${img}" alt=""></div>`
+  })
+  document.getElementById("img-slides").innerHTML = elem 
+}
+
+function showDetails(project){
+  let sourceCodes = ``
+  project.git.forEach(url => {
+    sourceCodes +=  `<a href="${url}">${url.slice(31,url.length)}</a> <br>`
+  })
+  let elem = `<li><strong>Name</strong>: ${project.name}</li>
+  <li><strong>Developed in</strong>: ${project.developed}</li>
+  <li><strong>Date</strong>: ${project.date}</li>
+  <li><strong>Source code</strong>: ${sourceCodes}</li>`
+  document.getElementById("information").innerHTML = elem
+  document.getElementById("decription").innerText = project.desc
+  if(project.demo !== ''){
+    document.getElementById("demo").innerHTML = `<a href="${project.demo}" class="btn btn-warning">Demo</a>`
+  }else{
+    document.getElementById("demo").innerHTML = `<a href="${project.demo}" class="btn btn-warning disabled">No Demo available</a>`
+  }
+}
     window.addEventListener('load',()=>{
       navbarlinksActive()
-      getUrlData()
+      let params = new URLSearchParams(window.location.search);
+      let project = projects.find(project => project.id === params.get("id"))
+      showSlides(project.img)
+      showDetails(project)
     })
     onscroll(document, navbarlinksActive)
   

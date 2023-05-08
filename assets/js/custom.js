@@ -34,7 +34,7 @@ copyPhone2.addEventListener('click',()=>{
 
 document.getElementById("sendMail").addEventListener('click',()=>{
     let name = document.getElementById("name").value
-    // let email = document.getElementById("email").value
+    let email = 'binilbalan.e.k@gmail.com'
     let subject = document.getElementById("subject").value
     let msg = document.getElementById("message").value
     let message = msg.charAt(0).toUpperCase()+msg.slice(1)

@@ -594,7 +594,6 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  cursor: pointer;
 }
 
 .portfolio .portfolio-wrap::before {
